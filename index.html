@@ -44,6 +44,26 @@
     body {
       background-image: linear-gradient(to right, rgb(255, 255, 255) 20%, rgb(255, 255, 255));
     }
+
+    .section-content {
+      display: none;
+    }
+
+    .section-content.active {
+      display: block;
+    }
+
+    #section-updates,
+    #section-experiences,
+    #section-publications {
+      padding-bottom: 80px;
+    }
+
+    #sidebar .nav-pills > li.active > a,
+    #sidebar .nav-pills > li.active > a:hover,
+    #sidebar .nav-pills > li.active > a:focus {
+      background-color: #34b4eb;
+    }
   </style>
 
 </head>
@@ -78,7 +98,7 @@
         <hr>
         <ul class="nav nav-pills nav-stacked"
           style="position:fixed; border-radius: 30px 5px 5px 30px; box-shadow: 0px 0px 3px rgb(214, 214, 214); background: rgb(252, 252, 252); padding: 20px;">
-          <li><a href="#updates">Updates</a></li>
+          <li><a href="#updates">Home</a></li>
           <li><a href="#experiences">Experiences</a></li>
           <li><a href="#publications">Publications</a></li>
           <li><a href="#competitions">Competitions</a></li>
@@ -89,6 +109,8 @@
       </div>
 
       <div class="col-xs-12 col-sm-9 col-md-9">
+
+        <div id="section-updates" class="section-content active">
 
         <div class="row">
 
@@ -264,6 +286,27 @@
                     Paper accepted as poster at the <strong>4th Workshop on Advances in Language and Vision Research (ALVR) of ACL 2026</strong>: <em>VLCE: An External Knowledge Framework for Contextual Image Captioning in Disaster Assessment</em>.
                   </td>
                 </tr>
+                <tr>
+                  <td style="white-space: nowrap; vertical-align: top; padding: 8px 16px 8px 0; color: #666; font-size: 0.92em;">Aug 2025</td>
+                  <td style="vertical-align: top; padding: 8px 0;">
+                    <a href="https://pivotly.com/" target="_blank" style="display: inline-block; background: #d4edda; border: 1px solid #28a745; border-radius: 4px; padding: 1px 7px; font-size: 0.8em; font-weight: bold; color: #155724; margin-right: 8px; text-decoration: none;">New Role</a>
+                    Joined <strong>Pivotly</strong> as <strong>Machine Learning Engineer</strong>.
+                  </td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; vertical-align: top; padding: 8px 16px 8px 0; color: #666; font-size: 0.92em;">Mar 2025</td>
+                  <td style="vertical-align: top; padding: 8px 0;">
+                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0168169925003229" target="_blank" style="display: inline-block; background: #fff3cd; border: 1px solid #ffc107; border-radius: 4px; padding: 1px 7px; font-size: 0.8em; font-weight: bold; color: #856404; margin-right: 8px; text-decoration: none;">Paper Accepted</a>
+                    Paper accepted at <strong>Journal of Computers and Electronics in Agriculture[IF: 8.9]</strong>: <em>Accurate water level monitoring in Alternate Wetting and Drying rice cultivation using attention-based ConvNeXt architecture</em>.
+                  </td>
+                </tr>
+                <tr>
+                  <td style="white-space: nowrap; vertical-align: top; padding: 8px 16px 8px 0; color: #666; font-size: 0.92em;">Feb 2025</td>
+                  <td style="vertical-align: top; padding: 8px 0;">
+                    <a href="https://www.siliconorchard.com/" target="_blank" style="display: inline-block; background: #d1ecf1; border: 1px solid #17a2b8; border-radius: 4px; padding: 1px 7px; font-size: 0.8em; font-weight: bold; color: #0c5460; margin-right: 8px; text-decoration: none;">Promotion</a>
+                    Promoted to <strong>Machine Learning Engineer</strong> at <strong>Silicon Orchard Limited</strong>.
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -271,7 +314,9 @@
 
         </div>
 
-        <div class="row">
+        </div><!-- /section-updates -->
+
+        <div id="section-experiences" class="section-content row">
           <!-- EXP starts  -->
           <hr><a name="experiences"></a>
           <hr>
@@ -605,8 +650,11 @@
             <!-- </div>
           </div> --> 
           <!-- </p>
-          <br> --> 
+          <br> -->
 
+        </div><!-- /section-experiences -->
+
+        <div id="section-publications" class="section-content row">
           <!-- PUBLICATIONS STARTS -->
           <hr><a name="publications"></a>
           <hr>
@@ -725,11 +773,9 @@
 
           <!-- PUBLICATIONS ENDS -->
 
+        </div><!-- /section-publications -->
 
-
-
-
-
+        <div id="section-competitions" class="section-content row">
           <!-- COMPETITIONS STARTS  -->
           <hr><a name="competitions"></a>
           <hr>
@@ -811,8 +857,9 @@
           </div>
           </p>
 
+        </div><!-- /section-competitions -->
 
-
+        <div id="section-projects" class="section-content row">
           <!-- competitions ends  -->
           <!-- projects starts  -->
           <hr><a name="projects"></a>
@@ -862,6 +909,7 @@
                           Innovation Fund</a>. -->
                       <!-- </div></div> -->
                       </p>
+                      </div></div></div></div></div></div><!-- flatten unclosed grid-item divs -->
                       <br>
 
                       <hr>
@@ -896,9 +944,10 @@ important to track our expenses and savings and thus we would easily find out wh
              
                       </p>
                       <br>
+                      </div><!-- /section-projects -->
+
+                      <div id="section-certifications" class="section-content row">
                       <!-- projects ends  -->
-
-
                       <!-- certifications starts  -->
                       <hr><a name="certifications"></a>
                       <hr>
@@ -979,6 +1028,9 @@ important to track our expenses and savings and thus we would easily find out wh
                       </p>
                       <br> -->
 
+                      </div><!-- /section-certifications -->
+
+                      <div id="section-others" class="section-content row">
                       <!-- certifications starts  -->
                       <hr><a name="others"></a>
                       <hr>
@@ -1072,3 +1124,50 @@ important to track our expenses and savings and thus we would easily find out wh
 </div>
 
 <hr>
+
+<script>
+  (function () {
+    var sections = document.querySelectorAll('.section-content');
+    var navLinks = document.querySelectorAll('#sidebar .nav a[href^="#"]');
+    var defaultSection = 'updates';
+
+    function showSection(name) {
+      var target = document.getElementById('section-' + name);
+      if (!target) {
+        return false;
+      }
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].classList.remove('active');
+      }
+      target.classList.add('active');
+
+      for (var j = 0; j < navLinks.length; j++) {
+        var link = navLinks[j];
+        var isMatch = link.getAttribute('href') === '#' + name;
+        if (link.parentElement) {
+          link.parentElement.classList.toggle('active', isMatch);
+        }
+      }
+      return true;
+    }
+
+    for (var k = 0; k < navLinks.length; k++) {
+      navLinks[k].addEventListener('click', function (e) {
+        var name = this.getAttribute('href').slice(1);
+        if (showSection(name)) {
+          e.preventDefault();
+          history.replaceState(null, '', '#' + name);
+          window.scrollTo(0, 0);
+        }
+      });
+    }
+
+    window.addEventListener('hashchange', function () {
+      var name = location.hash.slice(1) || defaultSection;
+      showSection(name);
+    });
+
+    var initial = location.hash.slice(1) || defaultSection;
+    showSection(initial);
+  })();
+</script>
