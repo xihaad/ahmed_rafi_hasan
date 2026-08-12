@@ -94,6 +94,17 @@
 
 
     <div class="row" style="padding:20px">
+      <div class="visible-xs-block" style="padding: 0 15px 15px;">
+        <select id="mobile-nav-select" class="form-control" style="border-radius: 6px; box-shadow: 0px 0px 3px rgb(214, 214, 214);">
+          <option value="updates">Home</option>
+          <option value="experiences">Experiences</option>
+          <option value="publications">Publications</option>
+          <option value="competitions">Competitions</option>
+          <option value="projects">Projects</option>
+          <option value="certifications">Certifications</option>
+          <option value="others">Others</option>
+        </select>
+      </div>
       <div class="hidden-xs col-sm-3 col-md-2" id="sidebar" role="navigation" style="margin-top:180px">
         <hr>
         <ul class="nav nav-pills nav-stacked"
@@ -1129,6 +1140,7 @@ important to track our expenses and savings and thus we would easily find out wh
   (function () {
     var sections = document.querySelectorAll('.section-content');
     var navLinks = document.querySelectorAll('#sidebar .nav a[href^="#"]');
+    var mobileSelect = document.getElementById('mobile-nav-select');
     var defaultSection = 'updates';
 
     function showSection(name) {
@@ -1148,6 +1160,10 @@ important to track our expenses and savings and thus we would easily find out wh
           link.parentElement.classList.toggle('active', isMatch);
         }
       }
+
+      if (mobileSelect) {
+        mobileSelect.value = name;
+      }
       return true;
     }
 
@@ -1156,6 +1172,16 @@ important to track our expenses and savings and thus we would easily find out wh
         var name = this.getAttribute('href').slice(1);
         if (showSection(name)) {
           e.preventDefault();
+          history.replaceState(null, '', '#' + name);
+          window.scrollTo(0, 0);
+        }
+      });
+    }
+
+    if (mobileSelect) {
+      mobileSelect.addEventListener('change', function () {
+        var name = this.value;
+        if (showSection(name)) {
           history.replaceState(null, '', '#' + name);
           window.scrollTo(0, 0);
         }
