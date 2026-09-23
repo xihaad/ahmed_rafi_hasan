@@ -41,12 +41,21 @@
   <!-- <script src="https://chat.relaychat.app"></script> -->
 
   <style>
+    html, body {
+      overflow-x: hidden;
+    }
+
     body {
-      background-image: linear-gradient(to right, rgb(255, 255, 255) 20%, rgb(255, 255, 255));
+      background-color: #f3f7fb;
+      background-image: linear-gradient(135deg, #f6f9fc 0%, #edf3fa 50%, #f3f8fc 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
     }
 
     .section-content {
       display: none;
+      min-height: 640px;
+      box-sizing: border-box;
     }
 
     .section-content.active {
@@ -63,6 +72,28 @@
     #sidebar .nav-pills > li.active > a:hover,
     #sidebar .nav-pills > li.active > a:focus {
       background-color: #34b4eb;
+    }
+
+    @media (max-width: 767px) {
+      .section-content {
+        min-height: auto !important;
+      }
+
+      #section-updates .row {
+        padding-left: 15px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      .profile-pic {
+        float: none !important;
+        display: block !important;
+        margin: 0 auto 15px !important;
+      }
+
+      #section-updates h1 {
+        font-size: 1.6em;
+      }
     }
   </style>
 
@@ -121,15 +152,15 @@
 
       <div class="col-xs-12 col-sm-9 col-md-9">
 
-        <div id="section-updates" class="section-content active">
+        <div id="section-updates" class="section-content active row" style="border-radius: 15px 50px 30px 5px; box-shadow: 0px 0px 3px rgb(214, 214, 214); background: rgb(252, 252, 252); padding: 20px;">
 
-        <div class="row">
+        <div class="row" style="padding-left: 40px;">
 
-          <img src="images/profile/Rafi.jpeg" class="pull-left" style="margin:20px 20px 20px 0; height:188px; width:142.02px; box-shadow: 0px 0px 5px rgb(0, 0, 0); border-top-left-radius: 10px;
+          <img src="images/profile/Rafi.jpeg" class="pull-left profile-pic" style="margin:20px 20px 20px 0; height:188px; width:142.02px; box-shadow: 0px 0px 5px rgb(0, 0, 0); border-top-left-radius: 10px;
             border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px;"
             alt="Ahmed Rafi Hasan AI Researcher and Engineer profile" />
           <!-- border-radius:100% -->
-          <p>
+          <div>
           <h1 style="text-shadow: 0px 0px 0px rgb(109, 109, 109);"><strong>Ahmed Rafi Hasan</strong></h1>
           <h6> Ahmed Rafi Hasan (আহমদ রাফি হাসান in Bangla/বাংলা);
              <em>Name of origin: Ahmed (Arabic) – Highly praised / Commendable | Rafi (Arabic) – Noble / Exalted | Hasan (Arabic) – Handsome / Virtuous</em>
@@ -179,38 +210,38 @@
 
 
           <!-- <a href="blog" class="icon blog">Blog</a> -->
-          </p>
+          </div>
         </div>
 
         <hr>
 
         <hr>
 
-        <div class="row">
+        <div class="row" style="border-radius: 15px 50px 30px 5px; box-shadow: 0px 0px 3px rgb(214, 214, 214); background: rgb(252, 252, 252); padding: 20px; margin: 0 15px 20px;">
           <!-- <p style="border-radius: 15px 50px 30px 5px; box-shadow: 0px 0px 3px rgb(215, 222, 255); background: hsl(245, 100%, 87%); padding: 0px 20px;">
             <strong><em>LOOKING FOR (MPhil/PhD) OPPORTUNITIES</em></strong>
           </p> -->
 
           <p>
-          <p>
+          <p style="color: #111111;">
             I am an AI engineer and researcher specializing in <a href="https://en.wikipedia.org/wiki/Multimodal_learning" target="_blank">Multimodal Machine Learning</a>, <a href="https://en.wikipedia.org/wiki/Reinforcement_learning" target="_blank">Reinforcement Learning</a>, and <a href="https://en.wikipedia.org/wiki/Computer_vision" target="_blank">Computer Vision</a>. Currently working as a Machine Learning Engineer at <a href="https://pivotly.com/" target="_blank">Pivotly</a>, designing and developing Gen AI applications, LLMs, building MCP and other AI Agent protocols and end-to-end AI systems with cloud deployment expertise on Microsoft Azure.
           </p>
 
-          <p>
+          <p style="color: #111111;">
             My research focus spans <a href="https://en.wikipedia.org/wiki/Scene_graph" target="_blank">Scene Graph Generation</a>, <a href="https://en.wikipedia.org/wiki/Medical_imaging" target="_blank">Medical Image Analysis</a>, and Precision Agriculture applications. I hold a B.Sc. in Computer Science and Engineering from <a href="http://www.uiu.ac.bd/" target="_blank">United International University</a> with <strong>Cum Laude</strong> distinction. <strong>I published research papers in IEEE Access, Computer and Electronics in Agriculture, IEEE TENCON, and other venues</strong>. Previously served as ML Engineer at <a href="https://siliconorchard.com/" target="_blank">Silcon Orchard Limited</a> and <a href="https://www.nodesdigitalbd.com/" target="_blank">Nodes Digital Limited</a> working on Physics Guided Neural Net, Synthetic Data Generation, Enhanced Caption Generation, AgriTech solutions and IoT-based smart agriculture systems.
           </p>
 
-          <p>
+          <p style="color: #111111;">
             I am passionate about advance research in <a href="https://en.wikipedia.org/wiki/Artificial_general_intelligence" target="_blank">AGI</a> development, with particular interest in interdisciplinary applications of AI. My long-term goal is to establish a world-class research lab contributing to safe and beneficial AI systems.
           </p>
           <br>
-          <p>
-            <em><strong>Industry Experience:</strong> LLM, Agentic Document Extraction, Retrieval-Augmented Generation (RAG), Multi-agent Systems (LangGraph, Autogen), Model Context Protocol (MCP) &amp; Agentic AI Protocols, LLM Orchestration &amp; Prompt Engineering, Natural-Language-to-SQL, Physics-Guided/Informed Neural Networks, Multimodal Image Clustering, Attention-based CNNs for Computer Vision, Model Deployment &amp; API Integration (Azure).
+          <p style="color: #4b5563;">
+            <em><strong style="color: #2563eb;">Industry Experience:</strong> LLM, Agentic Document Extraction, Retrieval-Augmented Generation (RAG), Multi-agent Systems (LangGraph, Autogen), Model Context Protocol (MCP) &amp; Agentic AI Protocols, LLM Orchestration &amp; Prompt Engineering, Natural-Language-to-SQL, Physics-Guided/Informed Neural Networks, Multimodal Image Clustering, Attention-based CNNs for Computer Vision, Model Deployment &amp; API Integration (Azure).
             </em>
           </p>
           <br>
-          <p>
-            <em><strong>Longterm Research Interest:</strong> Multimodal Machine Learning, Deep Reinforcement Learning, Embodied AI and Robotics(Multi-agent Control systems, Unmanned Aerial Vehicles), Physics Guided/Informed/Encoded Neural Network, 3D Scene Graph Generation, Multi-view synthesis and reconstruction, Medical Image processing, LLMs/VLLMs.
+          <p style="color: #4b5563;">
+            <em><strong style="color: #2563eb;">Longterm Research Interest:</strong> Multimodal Machine Learning, Deep Reinforcement Learning, Embodied AI and Robotics(Multi-agent Control systems, Unmanned Aerial Vehicles), Physics Guided/Informed/Encoded Neural Network, 3D Scene Graph Generation, Multi-view synthesis and reconstruction, Medical Image processing, LLMs/VLLMs.
             </em>
           </p>
           </p>
@@ -277,7 +308,7 @@
 
 
 
-        <div class="row">
+        <div class="row" style="border-radius: 15px 50px 30px 5px; box-shadow: 0px 0px 3px rgb(214, 214, 214); background: rgb(252, 252, 252); padding: 20px; margin: 0 15px 20px;">
           <!-- UPDATES starts -->
           <hr><a name="updates"></a>
           <hr>
@@ -332,7 +363,7 @@
 
         </div><!-- /section-updates -->
 
-        <div id="section-experiences" class="section-content row">
+        <div id="section-experiences" class="section-content row" style="border-radius: 15px 50px 30px 5px; box-shadow: 0px 0px 3px rgb(214, 214, 214); background: rgb(252, 252, 252); padding: 20px;">
           <!-- EXP starts  -->
           <hr><a name="experiences"></a>
           <hr>
@@ -670,7 +701,7 @@
 
         </div><!-- /section-experiences -->
 
-        <div id="section-publications" class="section-content row">
+        <div id="section-publications" class="section-content row" style="border-radius: 15px 50px 30px 5px; box-shadow: 0px 0px 3px rgb(214, 214, 214); background: rgb(252, 252, 252); padding: 20px;">
           <!-- PUBLICATIONS STARTS -->
           <hr><a name="publications"></a>
           <hr>
@@ -791,7 +822,7 @@
 
         </div><!-- /section-publications -->
 
-        <div id="section-competitions" class="section-content row">
+        <div id="section-competitions" class="section-content row" style="border-radius: 15px 50px 30px 5px; box-shadow: 0px 0px 3px rgb(214, 214, 214); background: rgb(252, 252, 252); padding: 20px;">
           <!-- COMPETITIONS STARTS  -->
           <hr><a name="competitions"></a>
           <hr>
@@ -875,7 +906,7 @@
 
         </div><!-- /section-competitions -->
 
-        <div id="section-projects" class="section-content row">
+        <div id="section-projects" class="section-content row" style="border-radius: 15px 50px 30px 5px; box-shadow: 0px 0px 3px rgb(214, 214, 214); background: rgb(252, 252, 252); padding: 20px;">
           <!-- competitions ends  -->
           <!-- projects starts  -->
           <hr><a name="projects"></a>
@@ -962,7 +993,7 @@ important to track our expenses and savings and thus we would easily find out wh
                       <br>
                       </div><!-- /section-projects -->
 
-                      <div id="section-certifications" class="section-content row">
+                      <div id="section-certifications" class="section-content row" style="border-radius: 15px 50px 30px 5px; box-shadow: 0px 0px 3px rgb(214, 214, 214); background: rgb(252, 252, 252); padding: 20px;">
                       <!-- projects ends  -->
                       <!-- certifications starts  -->
                       <hr><a name="certifications"></a>
@@ -1046,7 +1077,7 @@ important to track our expenses and savings and thus we would easily find out wh
 
                       </div><!-- /section-certifications -->
 
-                      <div id="section-others" class="section-content row">
+                      <div id="section-others" class="section-content row" style="border-radius: 15px 50px 30px 5px; box-shadow: 0px 0px 3px rgb(214, 214, 214); background: rgb(252, 252, 252); padding: 20px;">
                       <!-- certifications starts  -->
                       <hr><a name="others"></a>
                       <hr>
